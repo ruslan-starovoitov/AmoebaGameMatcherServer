@@ -493,6 +493,8 @@
             <e p="AccountRegistrationService.cs" t="Include" />
             <e p="AccountResources.cs" t="Include" />
             <e p="AccountResourcesDbReader.cs" t="Include" />
+            <e p="AccountShortViewModel.cs" t="Include" />
+            <e p="AccountsViewModel.cs" t="Include" />
             <e p="DapperHelperNotShownReward.cs" t="Include" />
             <e p="DbAccountWarshipReaderService.cs" t="Include" />
             <e p="DbWarshipsStatisticsReader.cs" t="Include" />

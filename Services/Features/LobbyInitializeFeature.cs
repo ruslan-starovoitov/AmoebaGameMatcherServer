@@ -25,6 +25,9 @@ namespace Services.Features
             serviceCollection.AddTransient<UsernameChangingService>();
             serviceCollection.AddTransient<UsernameValidatorService>();
             serviceCollection.AddTransient<AccountResourcesDbReader>();
+            
+            
+            serviceCollection.AddTransient<AccountMetadataReaderService>();
         }
     }
 }

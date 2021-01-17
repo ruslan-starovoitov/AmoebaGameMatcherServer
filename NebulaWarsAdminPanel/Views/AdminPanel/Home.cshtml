@@ -1,4 +1,4 @@
-﻿@model AccountsViewModel
+﻿@model Services.Services.LobbyInitialization.AccountsViewModel
 
 @{
     ViewData["Title"] = "AdminPanel";
@@ -16,7 +16,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">Id</th>
           <th scope="col">Username</th>
           <th scope="col">Registration date</th>
         </tr>
@@ -24,15 +24,13 @@
       <tbody>
       
       @{
-        int index = 1;
         foreach (var accountShortViewModel in Model.Acccounts)
         {
             <tr>
-                <th scope="row">@index</th>
+                <th scope="row">@accountShortViewModel.AccountId</th>
                 <td>@Html.ActionLink(accountShortViewModel.Username, "Index", "Account", new { accountId = 1 }, new { id = "sam", @class = "link" })</td>
                 <td>@accountShortViewModel.RegistrationDate</td>
             </tr>
-            index++;
         }
       }
       </tbody>

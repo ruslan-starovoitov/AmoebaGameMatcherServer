@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using DataLayer;
 using DataLayer.Tables;
 using JetBrains.Annotations;
 
@@ -35,6 +37,31 @@ namespace Services.Services.LobbyInitialization
             accountDbDto.SoftCurrency = accountResources.SoftCurrency;
             accountDbDto.LootboxPoints = accountResources.LootboxPoints;
             return accountDbDto;
+        }
+    }
+
+    public class AccountMetadataReaderService
+    {
+        private readonly ApplicationDbContext dbContext;
+
+        public AccountMetadataReaderService(ApplicationDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
+        public AccountsViewModel GetAllAccountsMetadata()
+        {
+            var list = dbContext.Accounts.Select(acc => new AccountShortViewModel
+            {
+                Username = acc.Username,
+                AccountId = acc.Id,
+                RegistrationDate = acc.RegistrationDateTime
+            }).ToList();
+
+            return new AccountsViewModel()
+            {
+                Acccounts = list
+            };
         }
     }
 }

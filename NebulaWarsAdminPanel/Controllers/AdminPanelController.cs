@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NebulaWarsAdminPanel.Models;
+using Services.Services.LobbyInitialization;
 
 namespace NebulaWarsAdminPanel.Controllers
 {
     public class AdminPanelController:Controller
     {
+        private readonly AccountMetadataReaderService metadataReaderService;
+
+        public AdminPanelController(AccountMetadataReaderService metadataReaderService)
+        {
+            this.metadataReaderService = metadataReaderService;
+        }
+
         public IActionResult Index()
         {
             if(User.Identity.IsAuthenticated)
@@ -21,17 +27,7 @@ namespace NebulaWarsAdminPanel.Controllers
         [HttpGet, Authorize]
         public IActionResult Home()
         {
-            var accountsViewModel = new AccountsViewModel()
-            {
-                Acccounts = new List<AccountShortViewModel>
-                {
-                    new AccountShortViewModel
-                    {
-                        Username = "opa",
-                        RegistrationDate = new DateTime(2000, 07, 19, 0, 0, 0)
-                    }
-                }
-            };
+            var accountsViewModel = metadataReaderService.GetAllAccountsMetadata();
             return View(accountsViewModel);
         }
 
