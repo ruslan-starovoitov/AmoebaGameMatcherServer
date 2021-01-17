@@ -4,6 +4,14 @@
 }
 
 <div class="text-center">
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <p id="error" class="alert-danger">@ViewData["ErrorMessage"]</p>
+    }
+    <h2>General properties</h2>
+    @{
+        int index = 0;
+    }
     <table class="table table-sm">
         <thead>
         <tr>
@@ -12,52 +20,75 @@
             <th scope="col">Value</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="table-primary">
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">@(++index)</th>
             <td>Id</td>
             <td>@Model.Id</td>
-        </tr> 
+        </tr>
         <tr>
-            <th scope="row">2</th>
+            <th scope="row">@(++index)</th>
             <td>Rating</td>
             <td>@Model.Rating</td>
-        </tr> 
+        </tr>
         <tr>
-            <th scope="row">3</th>
+            <th scope="row">@(++index)</th>
             <td>Username</td>
             <td>@Model.Username</td>
         </tr>
         <tr>
-            <th scope="row">4</th>
-            <td>HardCurrency</td>
-            <td>@Model.HardCurrency</td>
-        </tr>
-        <tr>
-            <th scope="row">5</th>
-            <td>LootboxPoints</td>
-            <td>@Model.LootboxPoints</td>
-        </tr>
-        <tr>
-            <th scope="row">6</th>
+            <th scope="row">@(++index)</th>
             <td>ServiceId</td>
             <td>@Model.ServiceId</td>
         </tr>
+         <tr>
+             <th scope="row">@(++index)</th>
+              <td>RegistrationDateTime</td>
+            <td>@Model.RegistrationDateTime</td>
+         </tr>
         <tr>
-            <th scope="row">7</th>
+            <th scope="row">@(++index)</th>
+            <td>LootboxPoints</td>
+            <td>@Model.LootboxPoints</td>
+        </tr>
+       
+        <tr>
+            <th scope="row">@(++index)</th>
             <td>SoftCurrency</td>
             <td>@Model.SoftCurrency</td>
         </tr>
         <tr>
-            <th scope="row">8</th>
-            <td>RegistrationDateTime</td>
-            <td>@Model.RegistrationDateTime</td>
+            <th scope="row">@(++index)</th>
+           <td>HardCurrency</td>
+            <td>@Model.HardCurrency</td>
         </tr>
         </tbody>
     </table>
-    
-    @if (ViewData["ErrorMessage"] != null)
-    {
-        <p id="error" class="alert-danger">@ViewData["ErrorMessage"]</p>
-    }
+
+
+  <h2>Warships</h2>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Combat role name</th>
+            <th scope="col">Skins</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary">
+        @foreach (var warship in Model.Warships)
+        {
+            <tr>
+                <th scope="row">@warship.Id</th>
+                <td>@warship.WarshipType.Name</td>
+                <td>@warship.WarshipType.WarshipCombatRole.Name</td>
+                <td>@string.Join(", ", warship.Skins.Select(skin=>skin.Name))</td>
+            </tr>    
+        }
+        
+
+        </tbody>
+    </table>
+
 </div>
