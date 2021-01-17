@@ -490,6 +490,7 @@
             <e p="AccountDbReaderService.cs" t="Include" />
             <e p="AccountFacadeService.cs" t="Include" />
             <e p="AccountMapperService.cs" t="Include" />
+            <e p="AccountMetadataReaderService.cs" t="Include" />
             <e p="AccountRegistrationService.cs" t="Include" />
             <e p="AccountResources.cs" t="Include" />
             <e p="AccountResourcesDbReader.cs" t="Include" />

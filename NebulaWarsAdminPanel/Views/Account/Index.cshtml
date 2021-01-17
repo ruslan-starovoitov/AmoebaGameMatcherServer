@@ -1,8 +1,63 @@
-﻿@model NetworkLibrary.NetworkLibrary.Http.AccountDto
+﻿@model DataLayer.Tables.AccountDbDto
 @{
     ViewData["Title"] = "AdminPanel Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">@Model.Username</h1>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Property name</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Id</td>
+            <td>@Model.Id</td>
+        </tr> 
+        <tr>
+            <th scope="row">2</th>
+            <td>Rating</td>
+            <td>@Model.Rating</td>
+        </tr> 
+        <tr>
+            <th scope="row">3</th>
+            <td>Username</td>
+            <td>@Model.Username</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>HardCurrency</td>
+            <td>@Model.HardCurrency</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>LootboxPoints</td>
+            <td>@Model.LootboxPoints</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>ServiceId</td>
+            <td>@Model.ServiceId</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>SoftCurrency</td>
+            <td>@Model.SoftCurrency</td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td>RegistrationDateTime</td>
+            <td>@Model.RegistrationDateTime</td>
+        </tr>
+        </tbody>
+    </table>
+    
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <p id="error" class="alert-danger">@ViewData["ErrorMessage"]</p>
+    }
 </div>

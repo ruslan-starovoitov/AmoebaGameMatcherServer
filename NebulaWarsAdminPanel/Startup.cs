@@ -32,12 +32,19 @@ namespace NebulaWarsAdminPanel
             services.AddTransient<IPassCheckerService, PasswordCheckerService>();
             
             
+            // services.AddFeature(new GoogleApiFeature());
             services.AddFeature(new DatabaseFeature());
             services.AddFeature(new LobbyInitializeFeature());
+            services.AddFeature(new PlayerQueueingFeature());
+            // services.AddFeature(new MatchCreationInitiationFeature());
+            services.AddFeature(new MatchCreationFeature());
+            services.AddFeature(new MatchFinishingFeature());
+            services.AddFeature(new GameServerNegotiationFeature());
+            services.AddFeature(new LootboxFeature());
+            services.AddFeature(new PurchasingFeature());
             services.AddFeature(new WarshipUpgradeFeature());
             services.AddFeature(new ShopFeature());
 
-            
             
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => 

@@ -28,7 +28,11 @@
         {
             <tr>
                 <th scope="row">@accountShortViewModel.AccountId</th>
-                <td>@Html.ActionLink(accountShortViewModel.Username, "Index", "Account", new { accountId = 1 }, new { id = "sam", @class = "link" })</td>
+                <td>
+                    @Html.ActionLink(accountShortViewModel.Username, "Index", "Account",
+                             new {playerServiceId = accountShortViewModel.ServiceId},
+                             new {id = "sam", @class = "link"})
+                </td>
                 <td>@accountShortViewModel.RegistrationDate</td>
             </tr>
         }
