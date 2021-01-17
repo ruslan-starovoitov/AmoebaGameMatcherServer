@@ -1,9 +1,9 @@
 ﻿using AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby;
-using AmoebaGameMatcherServer.Experimental;
-using AmoebaGameMatcherServer.Services.Experimental;
-using AmoebaGameMatcherServer.Services.LobbyInitialization;
 using DataLayer;
 using NUnit.Framework;
+using Services.Experimental;
+using Services.Services.Experimental;
+using Services.Services.LobbyInitialization;
 
 namespace IntegrationTests.Player.LobbyModel.Config
 {

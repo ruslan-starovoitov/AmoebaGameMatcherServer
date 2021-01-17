@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Experimental;
-using AmoebaGameMatcherServer.Services.Shop.Sales;
-using AmoebaGameMatcherServer.Services.Shop.ShopModel;
 using Microsoft.AspNetCore.Mvc;
 using NetworkLibrary.NetworkLibrary.Http;
+using Services.Experimental;
+using Services.Services.Shop.Sales;
+using Services.Services.Shop.ShopModel;
 
 namespace AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby
 {

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NebulaWarsAdminPanel.Services;
+using Services.Features;
 
 namespace NebulaWarsAdminPanel
 {
@@ -29,6 +30,14 @@ namespace NebulaWarsAdminPanel
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddTransient<IPassCheckerService, PasswordCheckerService>();
+            
+            
+            services.AddFeature(new DatabaseFeature());
+            services.AddFeature(new LobbyInitializeFeature());
+            services.AddFeature(new WarshipUpgradeFeature());
+            services.AddFeature(new ShopFeature());
+
+            
             
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => 

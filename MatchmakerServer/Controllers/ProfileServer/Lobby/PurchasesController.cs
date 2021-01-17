@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Experimental;
-using AmoebaGameMatcherServer.Services.GoogleApi;
 using Microsoft.AspNetCore.Mvc;
+using Services.Services.GoogleApi;
 
 namespace AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby
 {

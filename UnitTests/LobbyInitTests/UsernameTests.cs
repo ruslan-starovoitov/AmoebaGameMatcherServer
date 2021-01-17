@@ -1,6 +1,6 @@
-﻿using AmoebaGameMatcherServer.Services.LobbyInitialization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NetworkLibrary.NetworkLibrary.Http;
+using Services.Services.LobbyInitialization;
 
 namespace MatchmakerTest.LobbyInitTests
 {

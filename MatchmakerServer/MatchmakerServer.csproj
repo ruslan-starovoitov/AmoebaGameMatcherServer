@@ -27,10 +27,7 @@
     <ItemGroup>
       <ProjectReference Include="..\DAL\DAL.csproj" />
       <ProjectReference Include="..\NetworkLibrary\NetworkLibrary.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Services\Database" />
+      <ProjectReference Include="..\Services\Services.csproj" />
     </ItemGroup>
    
    

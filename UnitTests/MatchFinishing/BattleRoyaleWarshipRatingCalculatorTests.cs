@@ -1,6 +1,6 @@
 ﻿using System;
-using AmoebaGameMatcherServer.Services.MatchFinishing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Services.Services.MatchFinishing;
 
 namespace MatchmakerTest.MatchFinishing
 {

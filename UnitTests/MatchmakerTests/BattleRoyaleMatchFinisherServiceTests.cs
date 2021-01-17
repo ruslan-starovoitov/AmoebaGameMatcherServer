@@ -1,12 +1,12 @@
-﻿using AmoebaGameMatcherServer.Services.MatchFinishing;
-using AmoebaGameMatcherServer.Services.Queues;
-using DataLayer;
+﻿using DataLayer;
 using DataLayer.Tables;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Threading.Tasks;
+using Services.Services.MatchFinishing;
+using Services.Services.Queues;
 
 namespace MatchmakerTest.MatchmakerTests
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Experimental;
-using AmoebaGameMatcherServer.Services.MatchFinishing;
 using Libraries.NetworkLibrary.Experimental;
 using Microsoft.AspNetCore.Mvc;
+using Services.Experimental;
+using Services.Services.MatchFinishing;
 
 namespace AmoebaGameMatcherServer.Controllers.ProfileServer
 {

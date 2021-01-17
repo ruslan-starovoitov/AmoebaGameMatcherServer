@@ -1,10 +1,10 @@
 ﻿using AmoebaGameMatcherServer.Controllers.Matchmaker;
-using AmoebaGameMatcherServer.Experimental;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Services.MatchFinishing;
 using Moq;
+using Services.Experimental;
+using Services.Services.MatchFinishing;
 
 namespace MatchmakerTest.MatchmakerTests
 {

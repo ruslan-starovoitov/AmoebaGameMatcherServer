@@ -94,6 +94,7 @@
             </e>
           </e>
         </e>
+        <e p="PartialFakeIgnore.cs" t="Include" />
       </e>
       <e p="IntegrationTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -165,32 +166,6 @@
           </e>
           <e p="TestController.cs" t="Include" />
         </e>
-        <e p="Experimental" t="Include">
-          <e p="DefaultAccountFactory.cs" t="Include" />
-          <e p="DefaultAccountFactoryService.cs" t="Include" />
-          <e p="DefaultAccountTransactionsFactory.cs" t="Include" />
-          <e p="Globals.cs" t="Include" />
-          <e p="GooglePurchasesValidationController.cs" t="Include" />
-          <e p="ListExtension.cs" t="Include" />
-          <e p="PeriodicTaskExecutor.cs" t="Include" />
-          <e p="SerializationExtensions.cs" t="Include" />
-        </e>
-        <e p="Features" t="Include">
-          <e p="DatabaseFeature.cs" t="Include" />
-          <e p="GameServerNegotiationFeature.cs" t="Include" />
-          <e p="GoogleApiFeature.cs" t="Include" />
-          <e p="LobbyInitializeFeature.cs" t="Include" />
-          <e p="LootboxFeature.cs" t="Include" />
-          <e p="MatchCreationFeature.cs" t="Include" />
-          <e p="MatchCreationInitiationFeature.cs" t="Include" />
-          <e p="MatchFinishingFeature.cs" t="Include" />
-          <e p="PlayerQueueingFeature.cs" t="Include" />
-          <e p="PurchasingFeature.cs" t="Include" />
-          <e p="ServiceFeature.cs" t="Include" />
-          <e p="ServicesExtension.cs" t="Include" />
-          <e p="ShopFeature.cs" t="Include" />
-          <e p="WarshipUpgradeFeature.cs" t="Include" />
-        </e>
         <e p="MatchmakerServer.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -205,190 +180,6 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="readme.md" t="Include" />
-        <e p="Services" t="Include">
-          <e p="BundleVersionService.cs" t="Include" />
-          <e p="Database" t="Include">
-            <e p="Seeding" t="Include">
-              <e p="DataSeeder.cs" t="Include" />
-              <e p="Seaders" t="Include">
-                <e p="AccountSeeder.cs" t="Include" />
-                <e p="DecrementTypeSeeder.cs" t="Include" />
-                <e p="GameModeSeeder.cs" t="Include" />
-                <e p="IncrementTypeSeeder.cs" t="Include" />
-                <e p="MatchRewardTypeSeeder.cs" t="Include" />
-                <e p="ProductTypesSeeder.cs" t="Include" />
-                <e p="SkinTypesSeeder.cs" t="Include" />
-                <e p="TransactionTypesSeeder.cs" t="Include" />
-                <e p="WarshipCombatRoleSeeder.cs" t="Include" />
-                <e p="WarshipImprovementTrigger.cs" t="Include" />
-                <e p="WarshipTypesSeeder.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Experimental" t="Include">
-            <e p="WarshipImprovementCostChecker.cs" t="Include" />
-            <e p="WarshipImprovementFacadeService.cs" t="Include" />
-          </e>
-          <e p="GameServerNegotiation" t="Include">
-            <e p="GameServerNegotiatorService.cs" t="Include" />
-            <e p="GameServerNegotiatorServiceStub.cs" t="Include" />
-            <e p="IGameServerNegotiatorService.cs" t="Include" />
-          </e>
-          <e p="GoogleApi" t="Include">
-            <e p="AccessTokenUtils" t="Include">
-              <e p="CustomAccessTokenManager.cs" t="Include" />
-              <e p="CustomGoogleApiAccessTokenUpdater.cs" t="Include" />
-              <e p="CustomGoogleApiInitializer.cs" t="Include" />
-              <e p="GoogleApiAuthData.cs" t="Include" />
-              <e p="GoogleApiProfileStorageService.cs" t="Include" />
-              <e p="PackageNameStorageService.cs" t="Include" />
-              <e p="RefreshedData.cs" t="Include" />
-              <e p="TokenManagerService.cs" t="Include" />
-            </e>
-            <e p="GoogleApiPurchaseAcknowledgeService.cs" t="Include" />
-            <e p="GoogleApiPurchasesWrapperService.cs" t="Include" />
-            <e p="GoogleResponse.cs" t="Include" />
-            <e p="HardCurrencyTransactionFactory.cs" t="Include" />
-            <e p="InAppProductsService.cs" t="Include" />
-            <e p="OrderConfirmationService.cs" t="Include" />
-            <e p="PurchaseRegistrationService.cs" t="Include" />
-            <e p="PurchasesValidatorService.cs" t="Include" />
-            <e p="RealPurchaseTransactionFactoryService.cs" t="Include" />
-            <e p="UrlFactories" t="Include">
-              <e p="AllProductsUrlFactory.cs" t="Include" />
-              <e p="PurchaseAcknowledgeUrlFactory.cs" t="Include" />
-              <e p="PurchaseValidateUrlFactory.cs" t="Include" />
-            </e>
-          </e>
-          <e p="LobbyInitialization" t="Include">
-            <e p="AccountDbReaderService.cs" t="Include" />
-            <e p="AccountFacadeService.cs" t="Include" />
-            <e p="AccountMapperService.cs" t="Include" />
-            <e p="AccountRegistrationService.cs" t="Include" />
-            <e p="AccountResources.cs" t="Include" />
-            <e p="AccountResourcesDbReader.cs" t="Include" />
-            <e p="DapperHelperNotShownReward.cs" t="Include" />
-            <e p="DbAccountWarshipReaderService.cs" t="Include" />
-            <e p="DbWarshipsStatisticsReader.cs" t="Include" />
-            <e p="IDbAccountWarshipReaderService.cs" t="Include" />
-            <e p="IDbWarshipsStatisticsReader.cs" t="Include" />
-            <e p="ISkinsDbReaderService.cs" t="Include" />
-            <e p="LobbyModelFacadeService.cs" t="Include" />
-            <e p="NotShownRewardsReaderService.cs" t="Include" />
-            <e p="SkinsDbReaderService.cs" t="Include" />
-            <e p="UsernameChangingService.cs" t="Include" />
-            <e p="UsernameValidatorService.cs" t="Include" />
-            <e p="WarshipRatingScale.cs" t="Include" />
-            <e p="WarshipsCharacteristicsService.cs" t="Include" />
-            <e p="WarshipStatistics.cs" t="Include" />
-          </e>
-          <e p="Lootbox" t="Include">
-            <e p="LootboxDbWriterService.cs" t="Include" />
-            <e p="LootboxFacadeService.cs" t="Include" />
-            <e p="LootboxResourcesFactory.cs" t="Include" />
-            <e p="LootboxResourceTypeFactory.cs" t="Include" />
-            <e p="SmallLootboxDataFactory.cs" t="Include" />
-            <e p="SmallLootboxOpenAllowingService.cs" t="Include" />
-          </e>
-          <e p="MatchCreation" t="Include">
-            <e p="BattleRoyaleBotFactoryService.cs" t="Include" />
-            <e p="BattleRoyaleMatchCreatorService.cs" t="Include" />
-            <e p="BattleRoyaleMatchDataFactory.cs" t="Include" />
-            <e p="BotTemporaryIdFactory.cs" t="Include" />
-            <e p="MatchDbWriterService.cs" t="Include" />
-            <e p="PlayerTemporaryIdsFactory.cs" t="Include" />
-          </e>
-          <e p="MatchCreationInitiation" t="Include">
-            <e p="IPlayerTimeoutManager.cs" t="Include" />
-            <e p="MatchCreationInitiator.cs" t="Include" />
-            <e p="MatchCreationInitiatorSingletonService.cs" t="Include" />
-            <e p="PlayerTimeoutControllerService.cs" t="Include" />
-            <e p="PlayerTimeoutManagerServiceStub.cs" t="Include" />
-          </e>
-          <e p="MatchFinishing" t="Include">
-            <e p="BattleRoyaleMatchFinisherFacadeService.cs" t="Include" />
-            <e p="BattleRoyaleMatchFinisherService.cs" t="Include" />
-            <e p="BattleRoyaleMatchRewardCalculatorService.cs" t="Include" />
-            <e p="BattleRoyaleWarshipRatingCalculator.cs" t="Include" />
-            <e p="IBattleRoyaleMatchFinisherService.cs" t="Include" />
-            <e p="IBattleRoyaleMatchRewardCalculatorService.cs" t="Include" />
-            <e p="IPlayerMatchResultDbReaderService.cs" t="Include" />
-            <e p="IWarshipRatingReaderService.cs" t="Include" />
-            <e p="MatchReward.cs" t="Include" />
-            <e p="PlayerMatchResultDbReaderService.cs" t="Include" />
-            <e p="WarshipRatingReaderService.cs" t="Include" />
-          </e>
-          <e p="PlayerQueueing" t="Include">
-            <e p="GameServersRoutingDataService.cs" t="Include" />
-            <e p="IMatchmakerFacadeService.cs" t="Include" />
-            <e p="IQueueExtenderService.cs" t="Include" />
-            <e p="IWarshipValidatorService.cs" t="Include" />
-            <e p="MatchmakerFacadeService.cs" t="Include" />
-            <e p="MatchRoutingData.cs" t="Include" />
-            <e p="MatchRoutingDataService.cs" t="Include" />
-            <e p="QueueExtenderService.cs" t="Include" />
-          </e>
-          <e p="Queues" t="Include">
-            <e p="BattleRoyaleQueueSingletonService.cs" t="Include" />
-            <e p="BattleRoyaleUnfinishedMatchesSingletonService.cs" t="Include" />
-            <e p="IBattleRoyaleQueueSingletonService.cs" t="Include" />
-            <e p="IBattleRoyaleUnfinishedMatchesSingletonService.cs" t="Include" />
-            <e p="MatchEntryRequest.cs" t="Include" />
-            <e p="PlayersQueue.cs" t="Include" />
-          </e>
-          <e p="Shop" t="Include">
-            <e p="Sales" t="Include">
-              <e p="ProductChecker.cs" t="Include" />
-              <e p="SellerService.cs" t="Include" />
-              <e p="TransactionCreation" t="Include">
-                <e p="DecrementCreation" t="Include">
-                  <e p="DecrementFactoryService.cs" t="Include" />
-                  <e p="FreeDecrementType.cs" t="Include" />
-                  <e p="HardCurrencyDecrementType.cs" t="Include" />
-                  <e p="IDecrementFactory.cs" t="Include" />
-                  <e p="SoftCurrencyDecrementType.cs" t="Include" />
-                </e>
-                <e p="IncrementCreation" t="Include">
-                  <e p="IIncrementsFactory.cs" t="Include" />
-                  <e p="IncrementFactoryService.cs" t="Include" />
-                  <e p="LootboxIncrementsFactory.cs" t="Include" />
-                  <e p="LootboxSetIncrementsFactory.cs" t="Include" />
-                  <e p="SoftCurrencyIncrementsFactory.cs" t="Include" />
-                  <e p="WarshipPowerPointsIncrementsFactory.cs" t="Include" />
-                </e>
-                <e p="ShopTransactionFactory.cs" t="Include" />
-              </e>
-            </e>
-            <e p="ShopModel" t="Include">
-              <e p="DeleteMeShopSectionFactories" t="Include">
-                <e p="DiscountsSectionFactory.cs" t="Include" />
-                <e p="ForeignServiceProducts.cs" t="Include" />
-                <e p="HardCurrencySectionFactory.cs" t="Include" />
-                <e p="LootboxSectionFactory.cs" t="Include" />
-                <e p="SkinsSectionFactory.cs" t="Include" />
-                <e p="SmallHardCurrencyFactory.cs" t="Include" />
-                <e p="SmallSoftCurrencyProductModelFactory.cs" t="Include" />
-                <e p="SoftCurrencySectionFactory.cs" t="Include" />
-                <e p="WarshipsSectionFactory.cs" t="Include" />
-              </e>
-              <e p="SectionModelsComparator.cs" t="Include" />
-              <e p="ShopModelCreation" t="Include">
-                <e p="DailyDealsSectionFactory.cs" t="Include" />
-                <e p="PrizeFactoryService.cs" t="Include" />
-                <e p="ShopFactoryService.cs" t="Include" />
-                <e p="WarshipPowerPointProductFactory.cs" t="Include" />
-                <e p="WarshipPowerPointsProductsFactoryService.cs" t="Include" />
-              </e>
-              <e p="ShopModelDbReading" t="Include">
-                <e p="ShopModelDbReader.cs" t="Include" />
-              </e>
-              <e p="ShopModelDbWriting" t="Include">
-                <e p="ShopWriterService.cs" t="Include" />
-              </e>
-              <e p="ShopModelService.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Startup.cs" t="Include" />
       </e>
       <e p="NebulaWarsAdminPanel" t="IncludeRecursive">
@@ -605,6 +396,227 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Services" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Experimental" t="Include">
+          <e p="DefaultAccountFactory.cs" t="Include" />
+          <e p="DefaultAccountFactoryService.cs" t="Include" />
+          <e p="DefaultAccountTransactionsFactory.cs" t="Include" />
+          <e p="Globals.cs" t="Include" />
+          <e p="GooglePurchasesValidationController.cs" t="Include" />
+          <e p="ListExtension.cs" t="Include" />
+          <e p="PeriodicTaskExecutor.cs" t="Include" />
+          <e p="SerializationExtensions.cs" t="Include" />
+        </e>
+        <e p="Features" t="Include">
+          <e p="DatabaseFeature.cs" t="Include" />
+          <e p="GameServerNegotiationFeature.cs" t="Include" />
+          <e p="GoogleApiFeature.cs" t="Include" />
+          <e p="LobbyInitializeFeature.cs" t="Include" />
+          <e p="LootboxFeature.cs" t="Include" />
+          <e p="MatchCreationFeature.cs" t="Include" />
+          <e p="MatchCreationInitiationFeature.cs" t="Include" />
+          <e p="MatchFinishingFeature.cs" t="Include" />
+          <e p="PlayerQueueingFeature.cs" t="Include" />
+          <e p="PurchasingFeature.cs" t="Include" />
+          <e p="ServiceFeature.cs" t="Include" />
+          <e p="ServicesExtension.cs" t="Include" />
+          <e p="ShopFeature.cs" t="Include" />
+          <e p="WarshipUpgradeFeature.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Services.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="BundleVersionService.cs" t="Include" />
+          <e p="Database" t="Include">
+            <e p="Seeding" t="Include">
+              <e p="DataSeeder.cs" t="Include" />
+              <e p="Seaders" t="Include">
+                <e p="AccountSeeder.cs" t="Include" />
+                <e p="DecrementTypeSeeder.cs" t="Include" />
+                <e p="GameModeSeeder.cs" t="Include" />
+                <e p="IncrementTypeSeeder.cs" t="Include" />
+                <e p="MatchRewardTypeSeeder.cs" t="Include" />
+                <e p="ProductTypesSeeder.cs" t="Include" />
+                <e p="SkinTypesSeeder.cs" t="Include" />
+                <e p="TransactionTypesSeeder.cs" t="Include" />
+                <e p="WarshipCombatRoleSeeder.cs" t="Include" />
+                <e p="WarshipImprovementTrigger.cs" t="Include" />
+                <e p="WarshipTypesSeeder.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Experimental" t="Include">
+            <e p="WarshipImprovementCostChecker.cs" t="Include" />
+            <e p="WarshipImprovementFacadeService.cs" t="Include" />
+          </e>
+          <e p="GameServerNegotiation" t="Include">
+            <e p="GameServerNegotiatorService.cs" t="Include" />
+            <e p="GameServerNegotiatorServiceStub.cs" t="Include" />
+            <e p="IGameServerNegotiatorService.cs" t="Include" />
+          </e>
+          <e p="GoogleApi" t="Include">
+            <e p="AccessTokenUtils" t="Include">
+              <e p="CustomAccessTokenManager.cs" t="Include" />
+              <e p="CustomGoogleApiAccessTokenUpdater.cs" t="Include" />
+              <e p="CustomGoogleApiInitializer.cs" t="Include" />
+              <e p="GoogleApiAuthData.cs" t="Include" />
+              <e p="GoogleApiProfileStorageService.cs" t="Include" />
+              <e p="PackageNameStorageService.cs" t="Include" />
+              <e p="RefreshedData.cs" t="Include" />
+              <e p="TokenManagerService.cs" t="Include" />
+            </e>
+            <e p="GoogleApiPurchaseAcknowledgeService.cs" t="Include" />
+            <e p="GoogleApiPurchasesWrapperService.cs" t="Include" />
+            <e p="GoogleResponse.cs" t="Include" />
+            <e p="HardCurrencyTransactionFactory.cs" t="Include" />
+            <e p="InAppProductsService.cs" t="Include" />
+            <e p="OrderConfirmationService.cs" t="Include" />
+            <e p="PurchaseRegistrationService.cs" t="Include" />
+            <e p="PurchasesValidatorService.cs" t="Include" />
+            <e p="RealPurchaseTransactionFactoryService.cs" t="Include" />
+            <e p="UrlFactories" t="Include">
+              <e p="AllProductsUrlFactory.cs" t="Include" />
+              <e p="PurchaseAcknowledgeUrlFactory.cs" t="Include" />
+              <e p="PurchaseValidateUrlFactory.cs" t="Include" />
+            </e>
+          </e>
+          <e p="LobbyInitialization" t="Include">
+            <e p="AccountDbReaderService.cs" t="Include" />
+            <e p="AccountFacadeService.cs" t="Include" />
+            <e p="AccountMapperService.cs" t="Include" />
+            <e p="AccountRegistrationService.cs" t="Include" />
+            <e p="AccountResources.cs" t="Include" />
+            <e p="AccountResourcesDbReader.cs" t="Include" />
+            <e p="DapperHelperNotShownReward.cs" t="Include" />
+            <e p="DbAccountWarshipReaderService.cs" t="Include" />
+            <e p="DbWarshipsStatisticsReader.cs" t="Include" />
+            <e p="IDbAccountWarshipReaderService.cs" t="Include" />
+            <e p="IDbWarshipsStatisticsReader.cs" t="Include" />
+            <e p="ISkinsDbReaderService.cs" t="Include" />
+            <e p="LobbyModelFacadeService.cs" t="Include" />
+            <e p="NotShownRewardsReaderService.cs" t="Include" />
+            <e p="SkinsDbReaderService.cs" t="Include" />
+            <e p="UsernameChangingService.cs" t="Include" />
+            <e p="UsernameValidatorService.cs" t="Include" />
+            <e p="WarshipRatingScale.cs" t="Include" />
+            <e p="WarshipsCharacteristicsService.cs" t="Include" />
+            <e p="WarshipStatistics.cs" t="Include" />
+          </e>
+          <e p="Lootbox" t="Include">
+            <e p="LootboxDbWriterService.cs" t="Include" />
+            <e p="LootboxFacadeService.cs" t="Include" />
+            <e p="LootboxResourcesFactory.cs" t="Include" />
+            <e p="LootboxResourceTypeFactory.cs" t="Include" />
+            <e p="SmallLootboxDataFactory.cs" t="Include" />
+            <e p="SmallLootboxOpenAllowingService.cs" t="Include" />
+          </e>
+          <e p="MatchCreation" t="Include">
+            <e p="BattleRoyaleBotFactoryService.cs" t="Include" />
+            <e p="BattleRoyaleMatchCreatorService.cs" t="Include" />
+            <e p="BattleRoyaleMatchDataFactory.cs" t="Include" />
+            <e p="BotTemporaryIdFactory.cs" t="Include" />
+            <e p="MatchDbWriterService.cs" t="Include" />
+            <e p="PlayerTemporaryIdsFactory.cs" t="Include" />
+          </e>
+          <e p="MatchCreationInitiation" t="Include">
+            <e p="IPlayerTimeoutManager.cs" t="Include" />
+            <e p="MatchCreationInitiator.cs" t="Include" />
+            <e p="MatchCreationInitiatorSingletonService.cs" t="Include" />
+            <e p="PlayerTimeoutControllerService.cs" t="Include" />
+            <e p="PlayerTimeoutManagerServiceStub.cs" t="Include" />
+          </e>
+          <e p="MatchFinishing" t="Include">
+            <e p="BattleRoyaleMatchFinisherFacadeService.cs" t="Include" />
+            <e p="BattleRoyaleMatchFinisherService.cs" t="Include" />
+            <e p="BattleRoyaleMatchRewardCalculatorService.cs" t="Include" />
+            <e p="BattleRoyaleWarshipRatingCalculator.cs" t="Include" />
+            <e p="IBattleRoyaleMatchFinisherService.cs" t="Include" />
+            <e p="IBattleRoyaleMatchRewardCalculatorService.cs" t="Include" />
+            <e p="IPlayerMatchResultDbReaderService.cs" t="Include" />
+            <e p="IWarshipRatingReaderService.cs" t="Include" />
+            <e p="MatchReward.cs" t="Include" />
+            <e p="PlayerMatchResultDbReaderService.cs" t="Include" />
+            <e p="WarshipRatingReaderService.cs" t="Include" />
+          </e>
+          <e p="PlayerQueueing" t="Include">
+            <e p="GameServersRoutingDataService.cs" t="Include" />
+            <e p="IMatchmakerFacadeService.cs" t="Include" />
+            <e p="IQueueExtenderService.cs" t="Include" />
+            <e p="IWarshipValidatorService.cs" t="Include" />
+            <e p="MatchmakerFacadeService.cs" t="Include" />
+            <e p="MatchRoutingData.cs" t="Include" />
+            <e p="MatchRoutingDataService.cs" t="Include" />
+            <e p="QueueExtenderService.cs" t="Include" />
+          </e>
+          <e p="Queues" t="Include">
+            <e p="BattleRoyaleQueueSingletonService.cs" t="Include" />
+            <e p="BattleRoyaleUnfinishedMatchesSingletonService.cs" t="Include" />
+            <e p="IBattleRoyaleQueueSingletonService.cs" t="Include" />
+            <e p="IBattleRoyaleUnfinishedMatchesSingletonService.cs" t="Include" />
+            <e p="MatchEntryRequest.cs" t="Include" />
+            <e p="PlayersQueue.cs" t="Include" />
+          </e>
+          <e p="Shop" t="Include">
+            <e p="Sales" t="Include">
+              <e p="ProductChecker.cs" t="Include" />
+              <e p="SellerService.cs" t="Include" />
+              <e p="TransactionCreation" t="Include">
+                <e p="DecrementCreation" t="Include">
+                  <e p="DecrementFactoryService.cs" t="Include" />
+                  <e p="FreeDecrementType.cs" t="Include" />
+                  <e p="HardCurrencyDecrementType.cs" t="Include" />
+                  <e p="IDecrementFactory.cs" t="Include" />
+                  <e p="SoftCurrencyDecrementType.cs" t="Include" />
+                </e>
+                <e p="IncrementCreation" t="Include">
+                  <e p="IIncrementsFactory.cs" t="Include" />
+                  <e p="IncrementFactoryService.cs" t="Include" />
+                  <e p="LootboxIncrementsFactory.cs" t="Include" />
+                  <e p="LootboxSetIncrementsFactory.cs" t="Include" />
+                  <e p="SoftCurrencyIncrementsFactory.cs" t="Include" />
+                  <e p="WarshipPowerPointsIncrementsFactory.cs" t="Include" />
+                </e>
+                <e p="ShopTransactionFactory.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ShopModel" t="Include">
+              <e p="DeleteMeShopSectionFactories" t="Include">
+                <e p="DiscountsSectionFactory.cs" t="Include" />
+                <e p="ForeignServiceProducts.cs" t="Include" />
+                <e p="HardCurrencySectionFactory.cs" t="Include" />
+                <e p="LootboxSectionFactory.cs" t="Include" />
+                <e p="SkinsSectionFactory.cs" t="Include" />
+                <e p="SmallHardCurrencyFactory.cs" t="Include" />
+                <e p="SmallSoftCurrencyProductModelFactory.cs" t="Include" />
+                <e p="SoftCurrencySectionFactory.cs" t="Include" />
+                <e p="WarshipsSectionFactory.cs" t="Include" />
+              </e>
+              <e p="SectionModelsComparator.cs" t="Include" />
+              <e p="ShopModelCreation" t="Include">
+                <e p="DailyDealsSectionFactory.cs" t="Include" />
+                <e p="PrizeFactoryService.cs" t="Include" />
+                <e p="ShopFactoryService.cs" t="Include" />
+                <e p="WarshipPowerPointProductFactory.cs" t="Include" />
+                <e p="WarshipPowerPointsProductsFactoryService.cs" t="Include" />
+              </e>
+              <e p="ShopModelDbReading" t="Include">
+                <e p="ShopModelDbReader.cs" t="Include" />
+              </e>
+              <e p="ShopModelDbWriting" t="Include">
+                <e p="ShopWriterService.cs" t="Include" />
+              </e>
+              <e p="ShopModelService.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Services.csproj" t="IncludeRecursive" />
+      </e>
       <e p="SqlTesting" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="getAccountData.sql" t="Include" />
@@ -645,6 +657,7 @@
           </e>
         </e>
         <e p="UnitTests.csproj" t="IncludeRecursive" />
+        <e p="WarshipPowerScaleTests.cs" t="Include" />
       </e>
     </e>
   </component>

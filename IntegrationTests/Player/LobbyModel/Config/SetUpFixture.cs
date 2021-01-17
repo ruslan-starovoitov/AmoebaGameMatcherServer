@@ -1,16 +1,17 @@
 using System;
 using AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby;
-using AmoebaGameMatcherServer.Experimental;
 using AmoebaGameMatcherServer.Services;
-using AmoebaGameMatcherServer.Services.Database.Seeding;
-using AmoebaGameMatcherServer.Services.Experimental;
-using AmoebaGameMatcherServer.Services.LobbyInitialization;
 using DataLayer;
 using DataLayer.Configuration;
 using DataLayer.DbContextFactories;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 using NUnit.Framework;
+using Services.Experimental;
+using Services.Services;
+using Services.Services.Database.Seeding;
+using Services.Services.Experimental;
+using Services.Services.LobbyInitialization;
 
 namespace IntegrationTests.Player.LobbyModel.Config
 {

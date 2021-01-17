@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Experimental;
-using AmoebaGameMatcherServer.Services.PlayerQueueing;
-using AmoebaGameMatcherServer.Services.Queues;
 using Microsoft.AspNetCore.Mvc;
 using NetworkLibrary.NetworkLibrary.Http;
+using Services.Experimental;
+using Services.Services.PlayerQueueing;
+using Services.Services.Queues;
 
 namespace AmoebaGameMatcherServer.Controllers.Matchmaker
 {

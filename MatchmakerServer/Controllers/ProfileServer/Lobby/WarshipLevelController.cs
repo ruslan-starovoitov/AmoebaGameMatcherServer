@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AmoebaGameMatcherServer.Services.Experimental;
 using Microsoft.AspNetCore.Mvc;
+using Services.Services.Experimental;
 
 namespace AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby
 {
