@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ZeroFormatter;
 
 namespace NetworkLibrary.NetworkLibrary.Http
@@ -14,6 +14,10 @@ namespace NetworkLibrary.NetworkLibrary.Http
         [Index(5)] public virtual int SmallLootboxPoints { get; set; }
         [Index(6)] public virtual List<WarshipDto> Warships { get; set; }
         [Index(7)] public virtual int AccountId { get; set; }
-    }
 
+        public override string ToString()
+        {
+            return "username is " + Username;
+        }
+    }
 }

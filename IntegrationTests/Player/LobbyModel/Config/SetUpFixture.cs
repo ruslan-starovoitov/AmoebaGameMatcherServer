@@ -21,7 +21,7 @@ namespace IntegrationTests.Player.LobbyModel.Config
     internal sealed class SetUpFixture
     {
         internal static ApplicationDbContext DbContext;
-        private const string DatabaseName = "DevelopmentDb500";
+        private const string DatabaseName = "DevelopmentDb501";
         internal static AccountFacadeService AccountFacadeService;
         internal static LobbyModelController LobbyModelController;
         internal static AccountDbReaderService AccountReaderService;

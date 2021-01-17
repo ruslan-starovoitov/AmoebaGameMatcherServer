@@ -11,8 +11,8 @@ namespace AmoebaGameMatcherServer.Features
     {
         public override void Add(IServiceCollection serviceCollection)
         {
-            string databaseName = "r53";
-            IDbConnectionConfig dbConnectionConfig = new     DbConnectionConfig(databaseName);
+            string databaseName = "r54";
+            IDbConnectionConfig dbConnectionConfig = new DbConnectionConfig(databaseName);
             string connectionString = dbConnectionConfig.GetConnectionString();
 
             serviceCollection.AddTransient(provider => dbConnectionConfig);

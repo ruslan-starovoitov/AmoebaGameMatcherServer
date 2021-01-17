@@ -1,0 +1,40 @@
+﻿@model AccountsViewModel
+
+@{
+    ViewData["Title"] = "AdminPanel";
+}
+
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/home.css")"/>
+}
+
+<div class="text-center">
+    <form asp-action="LogOut" asp-controller="Auth" method="get">
+        <input type="submit" value="Вийти з акаунта" />
+    </form>
+    <h4>Список всех аккаунтов</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Registration date</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      @{
+        int index = 1;
+        foreach (var accountShortViewModel in Model.Acccounts)
+        {
+            <tr>
+                <th scope="row">@index</th>
+                <td>@Html.ActionLink(accountShortViewModel.Username, "Index", "Account", new { accountId = 1 }, new { id = "sam", @class = "link" })</td>
+                <td>@accountShortViewModel.RegistrationDate</td>
+            </tr>
+            index++;
+        }
+      }
+      </tbody>
+    </table>
+</div>
