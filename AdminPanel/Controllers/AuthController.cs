@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NebulaWarsAdminPanel.Services;
 
-namespace GameAdminPanel.Controllers
+namespace AdminPanel.Controllers
 {
     public class AuthController:Controller
     {

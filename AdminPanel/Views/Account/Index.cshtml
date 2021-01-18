@@ -1,0 +1,169 @@
+﻿@model AdminPanel.Models.AccountViewModel
+@{
+    ViewData["Title"] = "AdminPanel Page";
+}
+
+<div class="text-center">
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <p id="error" class="alert-danger">@ViewData["ErrorMessage"]</p>
+    }
+    <h2>General properties</h2>
+    @{
+        int index = 0;
+    }
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Property name</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary">
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>Id</td>
+            <td>@Model.AccountDbDto.Id</td>
+        </tr>
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>Rating</td>
+            <td>@Model.AccountDbDto.Rating</td>
+        </tr>
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>Username</td>
+            <td>@Model.AccountDbDto.Username</td>
+        </tr>
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>ServiceId</td>
+            <td>@Model.AccountDbDto.ServiceId</td>
+        </tr>
+         <tr>
+             <th scope="row">@(++index)</th>
+              <td>RegistrationDateTime</td>
+            <td>@Model.AccountDbDto.RegistrationDateTime</td>
+         </tr>
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>LootboxPoints</td>
+            <td>@Model.AccountDbDto.LootboxPoints</td>
+        </tr>
+       
+        <tr>
+            <th scope="row">@(++index)</th>
+            <td>SoftCurrency</td>
+            <td>@Model.AccountDbDto.SoftCurrency</td>
+        </tr>
+        <tr>
+            <th scope="row">@(++index)</th>
+           <td>HardCurrency</td>
+            <td>@Model.AccountDbDto.HardCurrency</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+  <h2>Warships</h2>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Combat role name</th>
+            <th scope="col">Skins</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary">
+        @foreach (var warship in Model.AccountDbDto.Warships)
+        {
+            <tr>
+                <th scope="row">@warship.Id</th>
+                <td>@warship.WarshipType.Name</td>
+                <td>@warship.WarshipType.WarshipCombatRole.Name</td>
+                <td>@string.Join(", ", warship.Skins.Select(skin=>skin.Name))</td>
+            </tr>    
+        }
+        </tbody>
+    </table>
+    
+    <h2>Transactions</h2>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Was shown to user</th>
+            <th scope="col">Time</th>
+            <th scope="col">Increments</th>
+            <th scope="col">Decrements</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary">
+        @foreach (var transaction in Model.Transactions)
+        {
+            <tr>
+                <th scope="row">@transaction.Id</th>
+                <td>@transaction.TransactionType.Name</td>
+                <td>@transaction.WasShown</td>
+                <td>@transaction.DateTime</td>
+                <td >
+                    <table>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Resource</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">WarshipId</th>
+                            <th scope="col">Skin</th>
+                        </tr>
+                          @if (!transaction.Increments.Any())
+                            {
+                                <tr>
+                                    <td colspan="4">empty</td>
+                                </tr>
+                            }
+                        @foreach (var incr in transaction.Increments)
+                        {
+                            <tr>
+                                <td>@incr.Id</td>
+                                <td>@incr.IncrementType.Name</td>
+                                <td>@incr.Amount</td>
+                                <td>@incr.WarshipId</td>
+                                <td>@incr.SkinType?.Name</td>
+                            </tr>
+                        }
+                    </table>
+                </td>
+                 <td >
+                    <table>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Resource</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">WarshipId</th>
+                        </tr>
+                        @if (!transaction.Decrements.Any())
+                        {
+                            <tr>
+                                <td colspan="4">empty</td>
+                            </tr>
+                        }
+                        @foreach (var decr in transaction.Decrements)
+                        {
+                            <tr>
+                                <td>@decr.Id</td>
+                                <td>@decr.DecrementType.Name</td>
+                                <td>@decr.Amount</td>
+                                <td>@decr.WarshipId</td>
+                            </tr>
+                        }
+                    </table>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>

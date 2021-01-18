@@ -1,0 +1,42 @@
+﻿@model Services.Services.LobbyInitialization.AccountsViewModel
+
+@{
+    ViewData["Title"] = "AdminPanel";
+}
+
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/home.css")"/>
+}
+
+<div class="text-center">
+    <form asp-action="LogOut" asp-controller="Auth" method="get">
+        <input type="submit" value="LogOut" class="btn btn-danger"/>
+    </form>
+    <h4>Accounts list</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Username</th>
+          <th scope="col">Registration date</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      @{
+        foreach (var accountShortViewModel in Model.Acccounts)
+        {
+            <tr>
+                <th scope="row">@accountShortViewModel.AccountId</th>
+                <td>
+                    @Html.ActionLink(accountShortViewModel.Username, "Index", "Account",
+                        new {playerServiceId = accountShortViewModel.ServiceId},
+                        new {id = "sam", @class = "link"})
+                </td>
+                <td>@accountShortViewModel.RegistrationDate</td>
+            </tr>
+        }
+      }
+      </tbody>
+    </table>
+</div>

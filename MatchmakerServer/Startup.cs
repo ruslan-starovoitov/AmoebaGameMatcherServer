@@ -1,15 +1,7 @@
-﻿using System;
-using System.Linq;
-using AmoebaGameMatcherServer.Controllers;
-using AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby;
-using AmoebaGameMatcherServer.Services;
-using Dapper;
-using DataLayer;
-using DataLayer.Configuration;
+﻿using DataLayer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 using Services.Features;
@@ -25,8 +17,7 @@ namespace AmoebaGameMatcherServer
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            services.AddControllersWithViews();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddFeature(new GoogleApiFeature());
             services.AddFeature(new DatabaseFeature());
             services.AddFeature(new LobbyInitializeFeature());
@@ -51,7 +42,7 @@ namespace AmoebaGameMatcherServer
             //Общие очереди игроков
         }
         
-        public void Configure(IApplicationBuilder app, 
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
             MatchCreationInitiatorSingletonService matchCreationInitiator, 
             CustomGoogleApiAccessTokenService googleApiAccessTokenManagerService,
             ApplicationDbContext dbContext, NpgsqlConnection npgsqlConnection)
@@ -59,20 +50,12 @@ namespace AmoebaGameMatcherServer
             matchCreationInitiator.StartThread();
             googleApiAccessTokenManagerService.Initialize().Wait();
 
-            app.UseRouting();
          
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    "default",
-                    "{controller=AdminPanel}/{action=Index}");
-            });
-            
             // //Заполнение данными
             new DataSeeder().Seed(dbContext);
             
             
-            // app.UseMvc();
+            app.UseMvc();
         }
     }
 }

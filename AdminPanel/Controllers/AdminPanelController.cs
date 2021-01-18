@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
-using GameAdminPanel.Models;
+using AdminPanel.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.LobbyInitialization;
 
-namespace GameAdminPanel.Controllers
+namespace AdminPanel.Controllers
 {
     public class AdminPanelController:Controller
     {

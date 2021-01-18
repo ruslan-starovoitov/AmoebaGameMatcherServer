@@ -1,8 +1,9 @@
 ﻿using System.Threading.Tasks;
+using AdminPanel.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.LobbyInitialization;
 
-namespace GameAdminPanel.Controllers
+namespace AdminPanel.Controllers
 {
     public class AccountController : Controller
     {
