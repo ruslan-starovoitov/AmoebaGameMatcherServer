@@ -36,7 +36,7 @@ namespace GameAdminPanel.Controllers
             if (!passCheckerService.IsPasswordCorrect(password))
             {
                 Console.WriteLine("\n\n\nWrong pass\n\n\n");
-                ViewData["ErrorMessage"] = "Неправильний пароль.";
+                ViewData["ErrorMessage"] = "Wrong password.";
                 return View();
             }
 

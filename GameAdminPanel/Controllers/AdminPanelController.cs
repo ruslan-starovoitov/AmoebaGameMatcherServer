@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using GameAdminPanel.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -30,27 +28,9 @@ namespace GameAdminPanel.Controllers
         public IActionResult Home()
         {
             var accountsViewModel = metadataReaderService.GetAllAccountsMetadata();
-            // var accountsViewModel = new AccountsViewModel()
-            // {
-            //     Acccounts = new List<AccountShortViewModel>()
-            //     {
-            //         new AccountShortViewModel()
-            //         {
-            //             Username = "sdads",
-            //             AccountId = 134,
-            //             RegistrationDate = DateTime.Now,
-            //             ServiceId = "asojbvpoasbvapou"
-            //         }
-            //     }
-            // };
             return View(accountsViewModel);
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

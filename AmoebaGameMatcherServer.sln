@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryForTests", "LibraryF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkLibrary", "NetworkLibrary\NetworkLibrary.csproj", "{F48B387F-45CB-4898-9A3B-6E241AF13815}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NebulaWarsAdminPanel", "NebulaWarsAdminPanel\NebulaWarsAdminPanel.csproj", "{B765E87A-0A77-432B-9558-01865D23BAB4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{50737DA5-D910-4990-B05D-E70E637D8FF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAdminPanel", "GameAdminPanel\GameAdminPanel.csproj", "{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}"
@@ -57,10 +55,6 @@ Global
 		{F48B387F-45CB-4898-9A3B-6E241AF13815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F48B387F-45CB-4898-9A3B-6E241AF13815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F48B387F-45CB-4898-9A3B-6E241AF13815}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B765E87A-0A77-432B-9558-01865D23BAB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B765E87A-0A77-432B-9558-01865D23BAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B765E87A-0A77-432B-9558-01865D23BAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B765E87A-0A77-432B-9558-01865D23BAB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -26,6 +26,7 @@ namespace AmoebaGameMatcherServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddControllersWithViews();
             services.AddFeature(new GoogleApiFeature());
             services.AddFeature(new DatabaseFeature());
             services.AddFeature(new LobbyInitializeFeature());
@@ -58,7 +59,15 @@ namespace AmoebaGameMatcherServer
             matchCreationInitiator.StartThread();
             googleApiAccessTokenManagerService.Initialize().Wait();
 
+            app.UseRouting();
          
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{controller=AdminPanel}/{action=Index}");
+            });
+            
             // //Заполнение данными
             new DataSeeder().Seed(dbContext);
             

@@ -3,11 +3,13 @@
 }
 
 <div class="text-center">
-    <h2>Введіть пароль адміністратора</h2>
-    <form asp-action="LogIn" method="post" class="my-4" asp-antiforgery="true">
-        <input id="password" placeholder="Пароль" type="password" name="password">
-        <input id="send" type="submit">
+    <form asp-action="LogIn" method="post" asp-antiforgery="true">
+        <div class="form-group">
+            <input id="password" type="password" name="password" class="form-control" placeholder="Enter admin pass">
+        </div>
+        <button id="send" type="submit" class="btn btn-primary">Submit</button>
     </form>
+    
     @if (ViewData["ErrorMessage"] != null)
     {
         <p id="error" class="alert-danger">@ViewData["ErrorMessage"]</p>
