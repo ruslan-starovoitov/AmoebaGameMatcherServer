@@ -28,6 +28,7 @@ namespace Services.Features
             
             
             serviceCollection.AddTransient<AccountMetadataReaderService>();
+            serviceCollection.AddTransient<AccountTransactionsReaderService>();
         }
     }
 }

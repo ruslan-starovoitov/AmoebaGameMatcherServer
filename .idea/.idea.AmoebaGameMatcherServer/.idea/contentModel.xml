@@ -496,6 +496,7 @@
             <e p="AccountResourcesDbReader.cs" t="Include" />
             <e p="AccountShortViewModel.cs" t="Include" />
             <e p="AccountsViewModel.cs" t="Include" />
+            <e p="AccountTransactionsReaderService.cs" t="Include" />
             <e p="DapperHelperNotShownReward.cs" t="Include" />
             <e p="DbAccountWarshipReaderService.cs" t="Include" />
             <e p="DbWarshipsStatisticsReader.cs" t="Include" />

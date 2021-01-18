@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using DataLayer.Tables;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.LobbyInitialization;
 
@@ -7,9 +9,13 @@ namespace NebulaWarsAdminPanel.Controllers
     public class AccountController : Controller
     {
         private readonly AccountDbReaderService accountReader;
-        public AccountController(AccountDbReaderService accountReader)
+        private readonly AccountTransactionsReaderService transactionsReaderService;
+
+        public AccountController(AccountDbReaderService accountReader, 
+            AccountTransactionsReaderService transactionsReaderService)
         {
             this.accountReader = accountReader;
+            this.transactionsReaderService = transactionsReaderService;
         }
 
         [HttpGet]
@@ -22,7 +28,20 @@ namespace NebulaWarsAdminPanel.Controllers
             }
 
             var account = await accountReader.ReadAccountAsync(playerServiceId);
-            return View(account);
+            var transactions = transactionsReaderService.GetAllTransactions(playerServiceId);
+
+            var viewModel = new AccountViewModel
+            {
+                Transactions = transactions,
+                AccountDbDto = account
+            };
+            return View(viewModel);
         }
+    }
+
+    public class AccountViewModel
+    {
+        public AccountDbDto AccountDbDto { get; set; }
+        public List<Transaction> Transactions { get; set; }
     }
 }
