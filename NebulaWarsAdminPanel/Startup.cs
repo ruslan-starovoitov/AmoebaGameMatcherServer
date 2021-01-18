@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using NebulaWarsAdminPanel.Services;
 using Services.Features;
 
@@ -12,14 +13,15 @@ namespace NebulaWarsAdminPanel
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
+        public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -28,7 +30,7 @@ namespace NebulaWarsAdminPanel
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddTransient<IPassCheckerService, PasswordCheckerService>();
             
             
@@ -54,7 +56,7 @@ namespace NebulaWarsAdminPanel
             
         }
         
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -70,13 +72,13 @@ namespace NebulaWarsAdminPanel
             app.UseStaticFiles();
             app.UseCookiePolicy();
             
+            app.UseRouting();
+            
             app.UseAuthentication(); 
             
-            app.UseMvc(routes =>
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    "default",
-                    "{controller=AdminPanel}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

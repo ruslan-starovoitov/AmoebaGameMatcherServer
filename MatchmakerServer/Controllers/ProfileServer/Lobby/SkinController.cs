@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Services.Services;
 
 namespace AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby
 {

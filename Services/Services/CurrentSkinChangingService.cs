@@ -4,7 +4,7 @@ using DataLayer;
 using DataLayer.Tables;
 using Microsoft.EntityFrameworkCore;
 
-namespace AmoebaGameMatcherServer.Controllers.ProfileServer.Lobby
+namespace Services.Services
 {
     /// <summary>
     /// Нужен для сохранения текущего скина.

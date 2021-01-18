@@ -1,22 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchmakerServer", "MatchmakerServer\MatchmakerServer.csproj", "{C49ED3D0-B1D6-41C5-8AE5-6611411CD808}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatchmakerServer", "MatchmakerServer\MatchmakerServer.csproj", "{C49ED3D0-B1D6-41C5-8AE5-6611411CD808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{72A89A5D-8D64-4BC4-86F6-0FFD7B1F1E50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{72A89A5D-8D64-4BC4-86F6-0FFD7B1F1E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{C0E2E203-8C80-4AC8-A6DD-D77C14C267CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{C0E2E203-8C80-4AC8-A6DD-D77C14C267CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{3205B9C2-43A4-4DA2-A0F2-794375DA311C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{3205B9C2-43A4-4DA2-A0F2-794375DA311C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTesting", "SqlTesting\SqlTesting.csproj", "{C054F515-B21B-4E47-86F3-CECE1E659A36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlTesting", "SqlTesting\SqlTesting.csproj", "{C054F515-B21B-4E47-86F3-CECE1E659A36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryForTests", "LibraryForTests\LibraryForTests.csproj", "{17BE13FC-60F0-4EDC-808B-D2C506451C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryForTests", "LibraryForTests\LibraryForTests.csproj", "{17BE13FC-60F0-4EDC-808B-D2C506451C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkLibrary", "NetworkLibrary\NetworkLibrary.csproj", "{F48B387F-45CB-4898-9A3B-6E241AF13815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkLibrary", "NetworkLibrary\NetworkLibrary.csproj", "{F48B387F-45CB-4898-9A3B-6E241AF13815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaWarsAdminPanel", "NebulaWarsAdminPanel\NebulaWarsAdminPanel.csproj", "{B765E87A-0A77-432B-9558-01865D23BAB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NebulaWarsAdminPanel", "NebulaWarsAdminPanel\NebulaWarsAdminPanel.csproj", "{B765E87A-0A77-432B-9558-01865D23BAB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{50737DA5-D910-4990-B05D-E70E637D8FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{50737DA5-D910-4990-B05D-E70E637D8FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAdminPanel", "GameAdminPanel\GameAdminPanel.csproj", "{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +49,6 @@ Global
 		{C054F515-B21B-4E47-86F3-CECE1E659A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C054F515-B21B-4E47-86F3-CECE1E659A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C054F515-B21B-4E47-86F3-CECE1E659A36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F02F3A9-129B-4169-B6BB-BFF236C5FB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F02F3A9-129B-4169-B6BB-BFF236C5FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F02F3A9-129B-4169-B6BB-BFF236C5FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F02F3A9-129B-4169-B6BB-BFF236C5FB37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17BE13FC-60F0-4EDC-808B-D2C506451C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17BE13FC-60F0-4EDC-808B-D2C506451C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BE13FC-60F0-4EDC-808B-D2C506451C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,5 +65,15 @@ Global
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50737DA5-D910-4990-B05D-E70E637D8FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750EC986-D05A-40AB-B0A6-7ACD7D1EC5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10DCF027-A0CD-45A1-9A4F-70D4C9B454A1}
 	EndGlobalSection
 EndGlobal

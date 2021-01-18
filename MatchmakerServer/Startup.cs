@@ -25,7 +25,7 @@ namespace AmoebaGameMatcherServer
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddFeature(new GoogleApiFeature());
             services.AddFeature(new DatabaseFeature());
             services.AddFeature(new LobbyInitializeFeature());
@@ -50,7 +50,7 @@ namespace AmoebaGameMatcherServer
             //Общие очереди игроков
         }
         
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+        public void Configure(IApplicationBuilder app, 
             MatchCreationInitiatorSingletonService matchCreationInitiator, 
             CustomGoogleApiAccessTokenService googleApiAccessTokenManagerService,
             ApplicationDbContext dbContext, NpgsqlConnection npgsqlConnection)
@@ -63,7 +63,7 @@ namespace AmoebaGameMatcherServer
             new DataSeeder().Seed(dbContext);
             
             
-            app.UseMvc();
+            // app.UseMvc();
         }
     }
 }
